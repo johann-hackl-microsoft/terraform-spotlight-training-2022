@@ -77,11 +77,11 @@ variable "setnum1" {
 
 # Tuple Variables
 variable "tuple1" {
-    type    = set(string)
+    type    = tuple([string, number, string, number, string, number, string, number, string, number, string, number, string, number])
     default = ["a", 1, "b", 2, "b", 2, "c", 3, "d", 4, "e", 5, "e", 5]
 }
 variable "tuple2" {
-    type    = set(string)
+    type    = tuple([string, bool, string, bool, number, string])
     default = ["westeurope", true, "eastus", true, 33, "japaneast"]
 }
 

@@ -18,7 +18,7 @@ provider "azurerm" {
 
 # Resource Group and Storage Account
 resource "azurerm_resource_group" "TG-RG" {
-  name     = "Terragrunt-ResourceGroup"
+  name     = "Terragrunt-ResourceGroup-${var.stage}" 
   location = "westeurope"
   tags     = {
     t1 = "abc"
@@ -31,7 +31,7 @@ resource "azurerm_resource_group" "TG-RG" {
     ignore_changes = [
       # Ignore changes to tags, e.g. because a management agent
       # updates these based on some ruleset managed elsewhere.
-      tags,
+      #TV_VAR_tg_rg_lifecycle_ignore_changes#
     ]
   }  
 }

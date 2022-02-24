@@ -18,7 +18,7 @@ provider "azurerm" {
 
 # Resource Group and Storage Account
 resource "azurerm_resource_group" "TG-RG" {
-  name     = "Terragrunt-ResourceGroup"
+  name     = "Terragrunt-ResourceGroup-${var.stage}" 
   location = "westeurope"
   tags     = {
     t1 = "abc"

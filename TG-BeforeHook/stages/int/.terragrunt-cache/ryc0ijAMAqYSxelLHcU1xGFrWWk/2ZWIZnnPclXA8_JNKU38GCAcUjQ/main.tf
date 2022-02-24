@@ -31,7 +31,7 @@ resource "azurerm_resource_group" "TG-RG" {
     ignore_changes = [
       # Ignore changes to tags, e.g. because a management agent
       # updates these based on some ruleset managed elsewhere.
-      #TV_VAR_tg_rg_lifecycle_ignore_changes#
+      tags, 
     ]
   }  
 }

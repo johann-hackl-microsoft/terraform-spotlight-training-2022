@@ -4,7 +4,7 @@
 Write-Output ("START: {0}..." -f $PSCommandPath)
 
 $varList = Get-ChildItem -Path env:\ | Where-Object {$_.Name -like 'TF_VAR_*'}
-$tfList = Get-ChildItem -Filter "*.tf" -Recurse -Path ("{0}\.." -f $PSScriptRoot)
+$tfList = Get-ChildItem -Filter "*.tf" -Recurse 
 
 foreach ($tf in $tfList) {
     Write-Output ("- Processing {0}..." -f $tf.FullName)

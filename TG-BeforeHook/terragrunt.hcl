@@ -3,7 +3,7 @@ terraform {
 
   before_hook "before_hook_1" {
     commands     = ["apply", "plan"]
-    execute      = ["powershell", "{. ..\\..\\util\\replace-inputs.ps1}"]
+    execute = ["powershell", "-File %CD%${get_path_to_repo_root()}util\replace-inputs.ps1"]
   }    
 }
 
